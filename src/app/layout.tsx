@@ -5,6 +5,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 
 import { ClerkProvider } from '@clerk/nextjs'
+import React from 'react'
 
 
 const inter = Inter({ subsets: ["latin"] })
@@ -19,12 +20,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+
+
+
   return (
     <html lang="en" className='dark'>
       <body className={inter.className}>
-        <Header />
         <ClerkProvider>
           <ProvidersNextUI>
+            <Header />
             {children}
           </ProvidersNextUI>
         </ClerkProvider>
