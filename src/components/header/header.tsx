@@ -8,7 +8,6 @@ import Container from '../container/container'
 import UserAuthButton from '../user_button/user_button'
 
 
-
 function Header() {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -51,7 +50,7 @@ function Header() {
                     <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
                 </NavbarContent>
 
-                <NavbarContent className="sm:hidden pr-3" justify="center">
+                <NavbarContent className="sm:hidden" justify="center">
                     <NavbarBrand>
                         <Link color="foreground" href='/'>
                             <AcmeLogo />
@@ -59,7 +58,7 @@ function Header() {
                     </NavbarBrand>
                 </NavbarContent>
 
-                <NavbarContent className="hidden sm:flex gap-4" justify="center">
+                <NavbarContent className="hidden sm:flex gap-4" justify="end">
                     <NavbarBrand>
                         <Link color="foreground" href='/'>
                             <AcmeLogo />
@@ -87,9 +86,9 @@ function Header() {
                     </NavbarItem>
                 </NavbarContent>
 
-                <NavbarContent justify="end">
+                {/* <NavbarContent justify="end">
                     <UserAuthButton />
-                </NavbarContent>
+                </NavbarContent> */}
 
                 <NavbarMenu>
                     {menuItems.map((item, index) => (
