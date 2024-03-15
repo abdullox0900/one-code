@@ -1,1 +1,1 @@
-![Image Alt text](https://firebasestorage.googleapis.com/v0/b/my-panel-17e33.appspot.com/o/github-img%2FCover.jpg?alt=media&token=d8e83d61-d8fd-48cd-88e0-8623314e8647)
+![Image Alt text](https://firebasestorage.googleapis.com/v0/b/my-panel-17e33.appspot.com/o/github-img%2FCreate%20Next%20App%20%C2%B7%208.06am%20%C2%B7%2003-15.jpeg?alt=media&token=3e2dd61a-c5c0-4ccf-a134-17057f89f5b3)
