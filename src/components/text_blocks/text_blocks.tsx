@@ -2,7 +2,7 @@ import { ChildrenType } from '@/typs/component.type'
 
 import { Arimo, Roboto_Mono } from "next/font/google"
 
-const robotoMono = Roboto_Mono({
+export const robotoMono = Roboto_Mono({
     subsets: ["latin"],
     weight: ['400', '700'],
     variable: '--font-roboto-mono',
@@ -15,7 +15,7 @@ const arimo = Arimo({
 })
 
 export function HeadingOne(props: ChildrenType) {
-    return <h4 className={`${robotoMono.variable} text-[17px] uppercase text-[#eef5fc] leading-[34px] font-mono tracking-[2px] font-medium`}> {props.children}</h4 >
+    return <h4 className={`${robotoMono.variable} text-[17px] uppercase text-[#eef5fc] leading-[34px] font-mono tracking-[2px] font-medium ${props.className}`}> {props.children}</h4 >
 }
 
 export function TextOne(props: ChildrenType) {

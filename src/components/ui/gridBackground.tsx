@@ -1,7 +1,8 @@
-import { Image } from "@nextui-org/react";
-import { FaGithub, FaLinkedin, FaTelegram, FaYoutube } from "react-icons/fa";
-import Container from "../container/container";
-import Posts from "../posts/posts";
+import { Image } from "@nextui-org/react"
+import { FaGithub, FaLinkedin, FaTelegram, FaYoutube } from "react-icons/fa"
+import Container from "../container/container"
+import Posts from "../posts/posts"
+import { HeadingOne } from '../text_blocks/text_blocks'
 
 export function GridBackgroundDemo() {
   return (
@@ -34,7 +35,8 @@ export function GridBackgroundDemo() {
               <li>
                 <a
                   className="delay-800 flex items-center gap-[10px] transition ease-in-out hover:opacity-50"
-                  href="#"
+                  href="https://github.com/abdullox0900"
+                  target='_blank'
                 >
                   <FaGithub />
                   GitHub
@@ -43,7 +45,8 @@ export function GridBackgroundDemo() {
               <li>
                 <a
                   className="delay-800 flex items-center gap-[10px] transition ease-in-out hover:text-[#00A0DC]"
-                  href="#"
+                  href="https://www.linkedin.com/feed/"
+                  target='_blank'
                 >
                   <FaLinkedin />
                   Linkedin
@@ -52,7 +55,8 @@ export function GridBackgroundDemo() {
               <li>
                 <a
                   className="delay-800 flex items-center gap-[10px] transition ease-in-out hover:text-[#FF0000]"
-                  href="#"
+                  href="https://www.youtube.com/channel/UC_Ctr4-bWS0lLZ05ae2oktw"
+                  target='_blank'
                 >
                   <FaYoutube />
                   YouTube
@@ -61,7 +65,8 @@ export function GridBackgroundDemo() {
               <li>
                 <a
                   className="delay-800 flex items-center gap-[10px] transition ease-in-out hover:text-[#229ED9]"
-                  href="#"
+                  href="https://t.me/day_a_js"
+                  target='_blank'
                 >
                   <FaTelegram />
                   Telegram
@@ -71,10 +76,10 @@ export function GridBackgroundDemo() {
           </div>
         </div>
         <div className="top-[45%] mt-[45%] max-[720px]:mt-[400px] max-[640px]:mt-[600px] max-[510px]:mt-[650px] max-[340px]:mt-[690px]">
-          <h4 className="mb-[25px] text-start text-[24px]">Top Posts</h4>
+          <HeadingOne className='text-start mb-[20px]'>Top Posts</HeadingOne>
           <Posts />
         </div>
       </div>
     </Container>
-  );
+  )
 }

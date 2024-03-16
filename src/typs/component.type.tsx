@@ -1,3 +1,5 @@
 export type ChildrenType = {
-  children?: string | React.ReactNode;
-};
+  children?: string | React.ReactNode
+  className?: string
+  styles?: React.CSSProperties
+}

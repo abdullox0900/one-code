@@ -1,9 +1,10 @@
+import BlockMain from '@/components/block_main/block_main'
 import Container from "@/components/container/container"
 import Heading from "@/components/heading/heading"
-import BlockMain from '@/components/block_main/block_main'
 
 import { TracingBeam } from "@/components/ui/tracing-beam"
 
+import { robotoMono } from '@/components/text_blocks/text_blocks'
 
 export default function Blog() {
 
@@ -22,7 +23,7 @@ export default function Blog() {
                   <li key={index}>
                     <a href="#">
                       <h3 className='text-[24px] text-start font-semibold pb-[5px] max-[450px]:text-[18px] '>🙏 27 Principles for 27 Years</h3>
-                      <span className='text-[rgb(194,203,212)] font-bold mb-[10px] max-[450px]:text-[12px]'>Jul 14, 2023 • 3 min • Life</span>
+                      <span className={`${robotoMono.variable} text-[rgb(194,203,212)] mb-[10px] max-[450px]:text-[12px] font-mono`}>Jul 14, 2023 • 3 min • Life</span>
                     </a>
                   </li>
                 )
