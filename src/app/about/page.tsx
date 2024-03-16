@@ -1,65 +1,51 @@
-import Container from "@/components/container/container";
-import Heading from "@/components/heading/heading";
-import BlockMain from "@/components/block_main/block_main";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import Image from "next/image";
+import BlockMain from "@/components/block_main/block_main"
+import Container from "@/components/container/container"
+import Heading from "@/components/heading/heading"
+import Image from "next/image"
+
+import AboutMe from '@/assets/img/about_me.jpeg'
+import { HeadingOne, TextOne } from '@/components/text_blocks/text_blocks'
+
+
 
 export default function About() {
-  const content = [
-    {
-      title: "Collaborative Editing",
-      description:
-        "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center text-white">
-          Collaborative Editing
-        </div>
-      ),
-    },
-    {
-      title: "Real time changes",
-      description:
-        "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-      content: (
-        <div className="flex h-full  w-full items-center justify-center text-white">
-          <Image
-            src="https://avatars.githubusercontent.com/u/94014212?v=4"
-            width={300}
-            height={300}
-            className="h-full w-full object-cover"
-            alt="linear board demo"
-          />
-        </div>
-      ),
-    },
-    {
-      title: "Version control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center text-white">
-          Version control
-        </div>
-      ),
-    },
-    {
-      title: "Running out of content",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center text-white">
-          Running out of content
-        </div>
-      ),
-    },
-  ];
 
   return (
     <Container>
       <BlockMain>
         <Heading>About</Heading>
-        <StickyScroll content={content} />
+        <HeadingOne>Me</HeadingOne>
+
+        <TextOne>I am Abdullokh Abdusalomov, a 22-year-old Software Developer from Tashkent, Uzbekistan, currently living in Andijon, Uzbekistan.</TextOne>
+
+        <TextOne>
+          I have been involved in web development for 2 years. During this time, I have gained valuable experience and skills in various aspects of web development. I have worked for several companies and participated in numerous projects over the past 2 years.
+        </TextOne>
+
+        <TextOne>
+          If you want to get in touch, I am most responsive over <a className='text-[#4385d7] hover:underline' href='mailto:a.abdullokh31@gmail.com' target='_blank'>email</a> and I tend to be pretty active on <a className='text-[#4385d7] hover:underline' href='#' target='_blank'>Telegram</a> as well.
+        </TextOne>
+
+        <HeadingOne>Mentor</HeadingOne>
+
+        <TextOne>
+          {`In addition to my development work, I have also served as a mentor in web development for the past year. I've had the opportunity to teach and guide over 150 individuals in their journey of learning programming.`}
+        </TextOne>
+
+        <TextOne>
+          Furthermore, I engage in educational content creation on <a className='text-[#4385d7] hover:underline' href='#' target='_blank'>YouTube</a>, where I run a blog and provide video tutorials on web development. {`It's`} my goal to contribute to the community by sharing my expertise and helping aspiring developers achieve their goals.
+        </TextOne>
+
+        <HeadingOne>Work</HeadingOne>
+
+        <TextOne>
+          <a className='text-[#4385d7] hover:underline' href="#">More about me →</a>
+        </TextOne>
+
+
+        {/* <Image className='w-full h-[400px] object-cover object-top rounded-[16px] mb-[35px]' src={AboutMe} width={100} height={400} alt='img' /> */}
+
       </BlockMain>
     </Container>
-  );
+  )
 }
