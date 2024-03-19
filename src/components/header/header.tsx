@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 
-import { AcmeLogo } from "@/assets/svg/acme";
+import { AcmeLogo } from "@/assets/svg/acme"
 import {
   Link,
   Navbar,
@@ -12,12 +12,12 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from "@nextui-org/react";
-import Container from "../container/container";
-import UserAuthButton from "../user_button/user_button";
+} from "@nextui-org/react"
+import Container from "../container/container"
+import UserAuthButton from "../user_button/user_button"
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const menuItems = [
     {
@@ -40,7 +40,7 @@ function Header() {
       name: "Edu",
       path: "/edu",
     },
-  ];
+  ]
 
   return (
     <Container style={{ padding: 0 }}>
@@ -68,27 +68,27 @@ function Header() {
 
         <NavbarContent className="hidden gap-4 sm:flex" justify="end">
           <NavbarBrand>
-            <Link color="foreground" href="/">
+            <Link className='font-light' color="foreground" href="/">
               <AcmeLogo />
             </Link>
           </NavbarBrand>
           <NavbarItem>
-            <Link color="foreground" href="/about">
+            <Link className='font-light' color="foreground" href="/about">
               About
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/portfolio">
+            <Link className='font-light' color="foreground" href="/portfolio">
               Portfolio
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/blog">
+            <Link className='font-light' color="foreground" href="/blog">
               Blog
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/edu">
+            <Link className='font-light' color="foreground" href="/edu">
               Edu
             </Link>
           </NavbarItem>
@@ -114,7 +114,7 @@ function Header() {
         </NavbarMenu>
       </Navbar>
     </Container>
-  );
+  )
 }
 
-export default Header;
+export default Header

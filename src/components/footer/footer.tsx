@@ -35,7 +35,7 @@ export default function Footer() {
     <Container>
       <footer className="flex items-center justify-between self-end py-[25px]">
         <span className="text-[16px] font-semibold text-[#3f3f3f]">
-          © One Code
+          © Abdullox 2024
         </span>
 
         <ul className="flex items-center gap-[15px]">
