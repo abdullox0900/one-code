@@ -1,16 +1,16 @@
-import ProvidersNextUI from "@/Providers/next.ui"
-import Header from "@/components/header/header"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-
-import localFont from "next/font/local"
-
-
-import Footer from "@/components/footer/footer"
-import { ClerkProvider } from "@clerk/nextjs"
+// Import React or Next
 import React from "react"
+import localFont from "next/font/local"
+import "./globals.css"
+import type { Metadata } from "next"
 
+// Import Packages
+import ProvidersNextUI from "@/Providers/next.ui"
+
+// Import Components
+import ReactQueryProvider from '@/Providers/query'
+import Footer from "@/components/footer/footer"
+import Header from "@/components/header/header"
 
 const surt = localFont({
   src: [
@@ -43,16 +43,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+
   return (
     <html lang="en" className="dark">
       <body className={surt.className}>
-        <ClerkProvider>
+        <ReactQueryProvider>
           <ProvidersNextUI>
             <Header />
             {children}
             <Footer />
           </ProvidersNextUI>
-        </ClerkProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   )

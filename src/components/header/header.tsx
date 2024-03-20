@@ -14,7 +14,6 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/react"
 import Container from "../container/container"
-import UserAuthButton from "../user_button/user_button"
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

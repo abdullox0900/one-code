@@ -5,19 +5,24 @@ import Heading from "@/components/heading/heading"
 import { TracingBeam } from "@/components/ui/tracing-beam"
 
 import { robotoMono } from '@/components/text_blocks/text_blocks'
+import ComingSoon from '@/components/coming_soon/coming_soon'
 
 export default function Blog() {
 
-  const arr = [1, 2, 3, 4, 5, 6, 6, 7, 8, 8, 9, 0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 8, 9, 0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 8, 9, 0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 8, 9, 0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 8, 9, 0,]
+  // const arr = []
+
+
 
   return (
     <Container>
       <BlockMain>
         <Heading>Blog</Heading>
 
+        <ComingSoon />
+
         <TracingBeam>
           <ul className='flex flex-col gap-[35px]'>
-            {
+            {/* {
               arr.map((item, index) => {
                 return (
                   <li key={index}>
@@ -28,7 +33,7 @@ export default function Blog() {
                   </li>
                 )
               })
-            }
+            } */}
           </ul>
         </TracingBeam>
 

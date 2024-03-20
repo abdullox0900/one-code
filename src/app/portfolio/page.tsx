@@ -1,17 +1,25 @@
 "use client"
 
-import BlockMain from "@/components/block_main/block_main"
-import Container from "@/components/container/container"
-import Heading from "@/components/heading/heading"
-import { TracingBeam } from "@/components/ui/tracing-beam"
+// Import Next or React
 import Image from "next/image"
 
+// Import Packages
+import { TracingBeam } from "@/components/ui/tracing-beam"
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
+
+
+// Import Icons
 import { FaGithub } from "react-icons/fa"
 import { FaLink } from "react-icons/fa6"
 
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+// Import Components
+import BlockMain from "@/components/block_main/block_main"
+import Container from "@/components/container/container"
+import Heading from "@/components/heading/heading"
+import Loading from '@/components/loading/loading'
 
+// TypeScript Type
 type ProjectData = {
   name: string
   img: string
@@ -23,11 +31,17 @@ type ProjectData = {
 }
 
 export default function Portfolio() {
-  const [data, setData] = useState([])
 
-  useEffect(() => {
-    axios('https://65c7cfb0e7c384aada6efcb0.mockapi.io/elements/students').then(res => setData(res.data))
-  }, [])
+  const { data, isLoading } = useQuery({
+    queryKey: ['project-data'],
+    queryFn: () => axios('https://65c7cfb0e7c384aada6efcb0.mockapi.io/elements/students'),
+  })
+
+  if (isLoading) {
+    return <Loading />
+  }
+
+
 
   return (
     <Container>
@@ -38,7 +52,7 @@ export default function Portfolio() {
 
         <TracingBeam>
           <ul className="flex w-full flex-wrap justify-center gap-[35px]">
-            {data?.map((item: ProjectData, index: number) => {
+            {data?.data?.map((item: ProjectData, index: number) => {
               return (
                 <li
                   key={index}
