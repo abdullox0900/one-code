@@ -21,3 +21,7 @@ export function HeadingOne(props: ChildrenType) {
 export function TextOne(props: ChildrenType) {
     return <p className={`${arimo.variable} font-helvetica text-[17px] text-[#dde1e7] leading-[32px] mb-[20px] font-light tracking-[0.9px]`}>{props.children}</p>
 }
+
+export function TextTwoPortfolio(props: ChildrenType) {
+    return <p className={`${arimo.variable} font-helvetica text-[14px] text-[#dde1e7] leading-[24px] mb-[20px] font-light tracking-[0.9px]`}>{props.children}</p>
+}

@@ -18,6 +18,7 @@ import BlockMain from "@/components/block_main/block_main"
 import Container from "@/components/container/container"
 import Heading from "@/components/heading/heading"
 import Loading from '@/components/loading/loading'
+import { TextOne, TextTwoPortfolio } from '@/components/text_blocks/text_blocks'
 
 // TypeScript Type
 type ProjectData = {
@@ -41,8 +42,6 @@ export default function Portfolio() {
     return <Loading />
   }
 
-
-
   return (
     <Container>
       <BlockMain>
@@ -56,21 +55,25 @@ export default function Portfolio() {
               return (
                 <li
                   key={index}
-                  className="h-[400px] w-[300px] rounded-[24px] bg-[#18181B] p-[15px]"
+                  className="flex flex-col justify-between h-[430px] w-[300px] rounded-[24px] bg-[#18181B] p-[15px] pb-[25px]"
                 >
                   <Image
-                    className="mb-[15px] w-full rounded-[16px]"
+                    className="mb-[10px] w-full rounded-[16px]"
                     src={item.img}
                     alt="img"
                     width={300}
                     height={400}
                   />
-                  <h4 className="mb-[15px] text-[22px] font-medium text-[#cccccc]">
+                  <h4 className="mb-[10px] text-[22px] font-medium text-[#cccccc]">
                     {item.name}
                   </h4>
+                  <TextTwoPortfolio>
+                    {item.description.length > 130 ? item.description.slice(0, 130) + '...' : item.description}
+                  </TextTwoPortfolio>
+                  {/* `
                   <p className="mb-[20px] text-[14px] text-[#cccccc]">
-                    {item.description.length > 200 ? item.description.slice(0, 200) + '...' : item.description}
-                  </p>
+                    {item.description.length > 150 ? item.description.slice(0, 150) + '...' : item.description}
+                  </p> */}
                   <div className="mx-auto flex w-[250px] items-center justify-between">
                     <a
                       href={item.link_view}

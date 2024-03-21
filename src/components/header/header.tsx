@@ -14,6 +14,7 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/react"
 import Container from "../container/container"
+import Status from '../status/status'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -61,6 +62,7 @@ function Header() {
           <NavbarBrand>
             <Link color="foreground" href="/">
               <AcmeLogo />
+              <Status />
             </Link>
           </NavbarBrand>
         </NavbarContent>
@@ -69,6 +71,7 @@ function Header() {
           <NavbarBrand>
             <Link className='font-light' color="foreground" href="/">
               <AcmeLogo />
+              <Status />
             </Link>
           </NavbarBrand>
           <NavbarItem>
